@@ -1,0 +1,1441 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    /*line-height: 1.4;*/
+}
+/**** was trying to preloadp images using CSS only  -- Farah 02/07/14 
+      http://stackoverflow.com/questions/1373142/preloading-css-background-images  *****/
+/*
+bode:after{
+	display:none;
+	content:url(../img/home/homeBack_fadedOut.png) url(../img/overview/overviewBack_fadedOut.png) url(../img/staff/staffBack_fadedOut.png) url(../img/services/servicesBack_fadedOut.png) url(../img/market/marketBack_fadedOut.png) url(../img/clients/clientsBack_fadeOut.png) url(../img/contact/contactBack_fadedOut.png);
+}
+*/
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: sub;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/************************/
+/********RESET***********/
+/************************/
+
+
+
+body,html {
+	background: #666 transparent;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+li {
+    padding:0;
+    margin:0;
+}
+
+a {
+	color:#222222;
+	text-decoration:none;
+    outline:0;
+}
+
+a.on {
+    outline:0;
+}
+
+a:hover {
+	color:#820024;
+}
+
+
+p {
+	margin:0;
+	padding:0;
+}
+
+#backGround {
+    height:150%;
+    width:150%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:url(../img/home/homeBack.jpg)no-repeat top center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover !important;
+}
+
+#blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:;
+    /*background:url(../img/home/homeBack.png) center center fixed;*/
+    z-index: 10000000;
+}
+    
+#blocker div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5em;
+    height: 2em;
+    margin: -1em 0 0 -2.5em;
+    color: #fff;
+    font-weight: bold;
+}
+p.disclaimer {
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+	text-align: justify;
+	color: #000;
+	margin-bottom: 10px;
+	font-size: 90%;
+}
+
+/************************/
+/********WRAPPER*********/
+/************************/
+
+
+#wrapper {
+	width:960px;
+    height: 100%;
+	margin:0 auto;
+    
+   
+}
+
+
+/************************/
+/*********SUBNAV*********/
+/************************/
+
+#subNavBack {
+    position:fixed;
+    top:0;
+    margin-left:0px;
+	width:126px;
+}
+
+/************************/
+/*******SUBWRAPPER*******/
+/************************/
+
+#subWrapper {
+	width:750px;
+	margin:0 auto;
+	padding:20px 0 0 80px;
+}
+
+
+/************************/
+/********HEADER**********/
+/************************/
+
+.header {
+	width: 100%;
+	margin:0 auto;
+    position:relative;
+}
+
+#logo {
+	margin:0 auto;
+	width:40%;
+    display: block;
+}
+
+
+/************************/
+/*********NAV************/
+/************************/
+
+#menuButton {
+  position:absolute;
+  top:0;
+  left:15px;
+  display:none;
+}
+
+.header #mainNav {	/* nav {  COmmenting out to test IE  -- Farah 1/29/14 */
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+.header #mainNav ul {	/* nav ul {  COmmenting out to test IE  -- Farah 1/29/14 */
+  width:100%;
+  display: block;
+	position:relative;
+  clear: both;
+  height: 25px;
+  margin: 0 auto;
+}
+.header #mainNav li {	/* nav li {  COmmenting out to test IE  -- Farah 1/29/14 */
+	display:inline-block;
+	width:100px ;
+  margin:auto;
+  float: left;
+  list-style: none;
+  padding: 5px 3px;
+  position: relative;
+}
+.header #mainNav li a {	/*nav li a {  COmmenting out to test IE  -- Farah 1/29/14 */
+  padding:0;
+  font-size: 1em;
+  text-transform: uppercase;
+  display: block;
+  overflow: hidden;
+  line-height: 18px;
+  list-style: none;
+}
+.firstNav {
+	text-align:left;
+	width:85px;
+}
+.lastNav {
+	text-align:right;
+  width:102px;
+}
+.navBorder {
+  height:2px;
+  display:block;
+}
+
+.subMenuContainer {
+  text-align:center;
+  position:relative;
+  margin-top:-38px;
+  padding:5px 0;
+  width:95%;
+  margin:10px auto 0 auto;
+}
+.subMenuContainer ul {
+  width:100%;
+  margin:0 auto;
+  display: block;	
+  position:relative;
+  clear: both ;
+}
+.subMenuContainer ul li {
+  display:inline-block;
+  padding:5px !important;
+  font-size:.8em;
+  margin-bottom:0px !important;
+  position:relative;
+  text-align:center !important;
+  list-style: none;
+  /*float: left;
+  width:100px ;*/
+}
+.subMenuContainer li a {
+  color:#303030;	
+  text-transform: uppercase;
+  /*display: block;*/
+  overflow: hidden;
+  line-height: 14px;
+  padding: 0;
+}
+.subMenuContainer li a:hover {
+  color:#820024;
+}
+
+/************************/
+/********ARTICLE*********/
+/************************/
+
+article .homeArticle, 
+.overviewArticle, 
+.staffArticle, 
+.servicesArticle, 
+.marketArticle, 
+.clientsArticle, 
+.contactArticle,
+.blogArticle {		/* article{  COmmenting out to test IE  -- Farah 1/29/14 */
+  position:relative; 
+  padding:10px 0;  
+  width:750px;
+  height: auto;
+  z-index: 10;
+}
+
+p { line-height: 1.3em; }
+
+.subcontainer {
+  width:95%;
+	margin: 0 auto; 
+}
+
+#homePageContainer {
+  margin:0 auto;
+  width:100%;
+	padding-top: 20px;
+}
+
+#homeImage {
+  border:1px solid #444;
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 10px auto;
+}
+
+
+/***************OVERVIEW********************/
+
+
+/****HISTORY****/
+
+#historyImage {
+	float:right;
+	width:35%;
+	padding:5px 0 20px 20px;
+}
+#historyContainer {
+	width: 95%;
+	margin:20px auto 0 auto;
+}
+.historyText {
+	margin:0 0 20px 0;
+}
+/****ZION BANCORP****/
+
+#zionbancorpContainer {
+	width:95%;
+	margin:0 auto;
+}
+#zionbancorpContainer p {
+	margin-top:20px;
+}
+.overviewArticle .headerBar h3 {
+    padding:7px 0 20px 10px;
+    text-transform: uppercase;
+	margin: 0 auto;
+}
+
+/****Affiliates****/
+
+#affMap {
+  position:relative;   
+}
+#commWash {
+  position:absolute;
+  top:30px;
+  left:30px;
+}
+#commOre {
+  top:130px;
+  left:6px;
+  position:absolute;
+}
+#NBAriz {
+  position:absolute;
+  top:460px;
+  left:110px;
+}
+#vectra {
+  position:absolute;
+  top:500px;
+  left:340px;
+}
+#zionsLogo {
+  position:absolute;
+  top:30px;
+  left:410px;
+}
+#CBTrust {
+  position:absolute;
+  top:230px;
+  left:30px;
+}
+#NSBank {
+  position:absolute;
+  top:370px;
+  left:0px;
+}
+#amegy {
+  position:absolute;
+  top:455px;
+  left:560px;
+}
+
+/****Offices****/
+
+#officesMap {
+  position:relative;   
+}
+#utahOffice {
+  position:absolute;
+  top:150px;
+  left:200px;
+}
+#knn {
+  position:absolute;
+  top:350px;
+  left:40px;
+}
+#bostonOffice {
+  position:absolute;
+  top:160px;
+  left:550px;  
+}
+#NBArizOffice {
+  position:absolute;
+  top:263px;
+  left:315px;   
+}
+#nevadaOffice {
+  position:absolute;
+  top:223px;
+  left:280px;     
+}
+.officeInfo {
+  background:rgba(255,255,255,.98);
+  width:30%;
+  font-size:.8em;
+  padding:10px;
+  border-radius:5px;
+   -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+ -moz-box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+ box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+  display:none;
+  z-index:9999999;
+}
+.officeInfo h2 {
+  font-size:1em;  
+  text-align:center;
+}
+#utahOfficeInfo {
+  position:absolute;
+  top:0px;
+  left:450px;
+}
+#knnOfficeInfo {
+  position:absolute;
+  top:300px;
+  left:190px;
+}
+#arizonaOfficeInfo {
+  position:absolute;
+  top:270px;
+  left:450px;
+}
+
+#nevadaOfficeInfo {
+  position:absolute;
+  top:250px;
+  left:450px;
+}
+#bostonOfficeInfo {
+  position:absolute;
+  top:30px;
+  left:310px;
+}
+
+
+/****CONTACT****/
+
+.employeeContact {
+	font-size:.8em;
+	margin:10px 0 0 40px;
+  list-style-type: none;
+	width: 100%;
+}
+.employeeContact li {
+	float:left;
+	width: 33.333%;
+	margin-bottom:20px;
+}
+#parkingMap {
+	margin-top:1px;
+}.contactInfo{
+	text-align:center;
+	line-height: 30px;
+}
+.contactInfo h2{
+	margin: 15px 0 0 0;
+	font-size: 1.8em;
+}
+.contactInfo h3{
+	margin: 5px 0;
+}
+.phoneNumber{
+	float:left;
+	width: 350px;
+	padding: 0 0 20px 0;
+	margin: 0;
+}
+.faxNumber{
+	float:right;
+	width: 350px;
+	padding: 0 0 20px 0;
+	margin: 0 -55px 0 0;
+}
+
+
+/*Highlight Selected Nav*/
+ul#subNavList a.selected { color:#820024; } /* the primary nav bar */
+#wrapper #subWrapper .subMenuContainer ul li a.selected { color:#820024 !important; } /* the secondary nav bar */
+a:active { color:#820024; }
+italic{font-style:italic;}
+strong {font-weight:bold;}
+stronger {font-weight:bold; /*font-size:1.4em;*/}
+strongest {font-weight:bold; /*font-size:1.9em;*/}
+highlight{font-weight:bold; color:#a30234; font-size:1.1em; font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;}
+highlight2{font-weight:bold; color:#b61a00; font-size:1.1em; font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;}
+.staff ul.circle {list-style-type:circle !important; padding: 0 0 0 55px; margin: -30px auto 0;}
+ul .square {list-style-type:square;}
+.sub-container{ width: 750px; height: auto;  /*540px;*/}
+footer { clear: both; }
+footer h2 { padding-top: 3%; }
+#subWrapper { /*background-color: #fff; opacity: .5;*/}
+#homeSlogan {margin-top: 85px; font-weight: 600; font-size: 1.3em; word-spacing: -.01em;}
+
+/***************Start CLIENT***************/
+/***    PUBLIC SERVICE  ***/
+#clientsBody{
+  background:url(../img/clients/CLIENTS_Background_Short.jpg) no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:100%;    
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.clientsArticle{		/* article{  COmmenting out to test IE  -- Farah 1/29/14     .homeArticle  */
+    margin-top:5px;
+}
+.clients{ width: 690px; padding: 0 30px; }
+.clients p{ 
+	text-align: justify;
+	margin: 1.3em 0;
+	font-size: .95em;
+	line-height: 1.6em;
+}
+.clientsArticle #publicService{		/* article #publicService{  COmmenting out to test IE  -- Farah 1/29/14 */
+  background-color: #1f030b;
+  overflow:hidden;
+  color:#FFF;
+  width: 750px;
+  height: 550px;
+}
+.clientsArticle #publicService #psLogo{		/* article #publicService #psLogo{  COmmenting out to test IE  -- Farah 1/29/14 */
+  margin: 30px 15px 0 -15px;
+  float: right;
+  width: 38%;
+}
+.clientsArticle #publicService #psPeople{		/* article #publicService #psPeople{  COmmenting out to test IE  -- Farah 1/29/14 */
+  margin: 25px 0 0 5px;
+  float: left;
+  width: 60%;
+}
+.clientsArticle #publicService p{		/* article #publicService p{  COmmenting out to test IE  -- Farah 1/29/14 */
+	width: 225px;
+	height: 350px;
+	font-size: 1.0em;
+	line-height: 1.5em;
+	margin-top: 85px;
+	margin-left: 485px;
+}
+.clientHighlightTitle{
+	color: #820024;
+	font-size: 1.2em !important;
+	font-weight: bold;
+	text-align: center !important;
+	padding: 25px 0 20px 0;
+}
+
+/***************HOME: WELCOME***************/
+#welcomeBody{
+  /*background:url(../img/home/welcome_bg_1.jpg) no-repeat top center fixed; */
+  background:url(../img/home/welcome_bg.jpg) center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:100%;
+}
+#welcomeBody h4 { margin: 1.5em 0 .4em 0; }
+#welcomeBody a{
+  color: #3b100d;
+  font-size: 1.1em;
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+#welcomeBody ul{
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 20px;
+  list-style: none outside;
+}
+#welcomeBody ul li li { margin-left: 12px; }
+#welcomeBody .columnRight{ /*float: right; */ padding-left: 500px;}
+#welcomeBody .columnLeft{
+  margin: -20px 0 0 40px;
+  width:50%;  
+  float: left;
+}
+#welcomeBody a:hover {
+  font-weight:600;
+  color:#900;
+  text-decoration:none;   
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+#jungleOutThere {
+  width: 85%;
+  height: auto;
+  padding: 0 0 0 45px;
+  position: static;
+}
+#compass {
+  width: 24%;
+  margin: -650px 0 0 -55px;
+  position: relative;
+}
+#jungleCompass {
+  width: 100%;
+  height: auto;
+  /*margin: 0 0 0 -60px;*/
+  position: relative;
+}
+/*******End HOME: WELCOME***********/
+
+
+/***    CLIENT VIDEO    ***/
+.sub-container.client {
+  height: auto;
+  padding-bottom: 45px;
+}
+.videoList {
+  color: #000;
+  list-style-type: none;
+  clear: both;
+  padding: 0 0 20px 0;
+}
+.videoList li {
+  float: left;
+  width: 250px;
+  height: 180px;
+  padding: 0px 0px 40px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.videoList li .clientVideos {
+  width: 215px;
+  height: 135px;
+  display: block;
+}
+.videoList li h2 {
+  font-size: .92em;
+  font-weight: normal;
+  margin: 10px 0;
+  width: 225px;
+}
+#visitYoutube {
+  width:100%;
+  text-align: center;
+}
+#visitYoutube p {
+}
+#visitYoutube a:hover { font-weight:bold; }
+/*******End CLIENT VIDEO***********/
+
+
+/***    RECENT PROJECTS ***/
+.recentProject {
+  width:100%;	
+	height: 225px;
+  margin:40px 0 0 0;
+  position:relative;
+  display:inline-block;
+}
+
+
+.projectDescription {
+  float:left;
+  width:70%;
+}
+
+.projectDescription span {
+  color:#eee;
+  padding:5px 10px;
+}
+
+.projectDescription p {
+  margin:15px 0;
+  font-size:.95em;
+}
+
+.projectImage {
+  float:right;
+  width:28%;
+}
+
+/***    CLIENT HIGHLIGHT    ***/
+#clientHighlightVideo{
+	width: 100%;
+	text-align: center;
+	padding: 22px 0 30px 0;
+}
+#clientHighlightVideo a{
+	
+}
+#clientHighlightVideo img{
+	width: 39%;
+	height: auto;
+	border: none;
+}
+
+
+/***    CLIENT PHOTO    ***/
+#img-bg-one{
+  background-color: #c7c7d9;
+  overflow:hidden;
+  width: 600px;
+  height: 615px;  
+  margin: 30px 0 0 45px;
+  position: relative;
+  z-index: 1;
+  transform:rotate(2deg);
+  -ms-transform:rotate(2deg); /* IE 9 */
+  -webkit-transform:rotate(2deg); /* Safari and Chrome */
+}
+#img-bg-two{
+  background-color: #ffffff;
+  overflow:hidden;
+  width: 407px;
+  height: 345px;  
+  margin: 40px 0 0 90px;
+  transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg); /* IE 9 */
+  -webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+#img-bg-three{
+  background-color: #171202;
+  overflow:hidden;
+  width: 420px;
+  height: 520px;  
+  margin: -100px 0 0 270px;
+  position: relative;
+  z-index: 5;
+}
+#img-bg-four{
+  background-color: #686044;
+  overflow:hidden;
+  width: 740px;
+  height: 475px;
+  margin: -35px 0 0 5px;
+  position: relative;
+  z-index: 3;
+}
+#img-one{width: 375px; height: 313px;  margin:15px 0 0 16px;}
+#img-two{width: 315px; height: 422px; margin:45px 0 0 45px; 
+  transform:rotate(-4deg);
+  -ms-transform:rotate(-4deg); /* IE 9 */
+  -webkit-transform:rotate(-4deg); /* Safari and Chrome */
+}
+#img-three{
+  width: 480px;
+  height: 346px;
+  margin: -125px 0 0 50px; 
+  transform:rotate(5deg);
+  -ms-transform:rotate(5deg); /* IE 9 */
+  -webkit-transform:rotate(5deg); /* Safari and Chrome */
+}
+#img-bg-one h2,  #img-bg-three h2, #img-bg-four h2{
+}
+#img-bg-one #img-description-one{
+  text-align: center;
+  color:#000;
+  margin-top: .9em;
+  transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg); /* IE 9 */
+  -webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+#img-description-two{
+  float: left;
+  text-align: right;
+  margin: 2em 0 .3em 6.5em;
+  width: 9em;
+  color:#000;
+}
+#img-bg-four #img-description-three{
+  color:#000;
+  margin: 50px 0 115px 165px; 
+  padding-bottom: 10px;
+  line-height: 1.5em;
+  transform:rotate(5deg);
+  -ms-transform:rotate(5deg); /* IE 9 */
+  -webkit-transform:rotate(5deg); /* Safari and Chrome */
+}
+#img-bg-four #img-description-four{
+  float: left;
+  width: 160px;
+  text-align: left;
+  color: #000;
+  font-size: 1.05em;
+  line-height: 1.58em;
+  margin: -325px 0 0 545px;
+  transform:rotate(5deg);
+  -ms-transform:rotate(5deg); /* IE 9 */
+  -webkit-transform:rotate(5deg); /* Safari and Chrome */
+}
+/*******End CLIENT***********/
+
+/***************Start MARKET***************/
+/***    Bond Market Outlook ***/
+#marketBody{
+  background:url(../img/market/ZBPF-MARKET-Background.jpg) no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:100%;    
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+#marketBody .market{ width: 750px; }
+#title{
+  width: 98%;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #eee;
+  padding:5px 0 2px 15px;
+  background-color: #820024;
+}
+.market table{	/* #rateTable, #buyerIndexTable{   */
+	width: 100%; 
+	outline: 1px solid #000; 
+	border-collapse:collapse;	
+  background-color:#C39 \0/ !important;
+}
+.market table .municipalTypes{ font-weight:bold; text-align:left !important; }
+.market table th {		/*#rateTable th, #buyerIndexTable th, #ticBidTable th{ */
+  text-align:center; 
+  outline: 1px solid #000;  
+  border-collapse:collapse; 
+  padding: 4px 10px; 
+  font-weight: 600;
+  background-color: #bebebe;
+}
+.market table td{		/*#rateTable td, #buyerIndexTable td, #ticBidTable td{ */
+  text-align: center;
+  outline: 1px solid #000;  
+  border-collapse:collapse; 
+  padding: 3px 30px;
+  color:#000;
+    
+    /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(255, 255, 255);
+  /* RGBa with 0.7 opacity */
+  background: rgba(255, 255, 255, 0.7);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF, endColorstr=#B2FFFFFF);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF, endColorstr=#B2FFFFFF)";
+}
+
+#footNote { width:100%; padding-top:5px; text-align:center; font-size:12px; }
+
+/***    Yield Curve ***/
+#yieldCurve{ width: 87%; height: auto; margin: 10px 45px; }
+
+/***    Recent Bond Sales   ***/
+#recentBondSalesGraph{  width:100%; height: auto; /*margin: 0 0 0 20px;*/ }
+.market #bidComparison{ width: 80%;}
+.market #bidComparison td{
+/*
+background-color: #820024;
+opacity:0.5;
+filter:Alpha(opacity=50); /* IE8 and earlier 
+*/
+
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(130, 0, 36);
+/* RGBa with 0.6 opacity */
+background: rgba(130, 0, 36, 1);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2820024, endColorstr=#B2820024);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2820024, endColorstr=#B2820024)";
+
+  padding: 5px 20px; 
+  color:#FFF;
+  font-size:12px;
+  text-align:center;}
+	
+.market #ticBidTable{ width: 90%;}	
+.market #ticBidTable th{
+	text-transform:uppercase;
+}
+.market #ticBidTable td.competitors{
+	text-align:left;
+	margin-left:10px;
+}
+.newsletter{
+	text-align: center;
+	padding-top: 15px;
+}
+	
+	
+	
+	
+	
+.bondItem {text-align:left !important;}
+
+#agencyLinks {
+  width:100%;
+  text-align: center;
+}
+#agencyLinks a:hover {
+	font-weight:bold;
+}
+
+ul.pdfFiles{
+	list-style-type:circle;
+	padding: 20px 0 0 20px;
+}
+ul.pdfFiles a:hover {
+	font-weight:600;
+	font-size: .97em;
+}
+
+/*******End MARKET***********/
+
+/***************Start SERVICES***************/
+#serviceBody{
+  background:url(../img/services/ZBPF_SERVICES_Background.jpg) no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:100%;    
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.services{ width: 690px; padding: 0 30px; }
+.services h2{ text-transform: uppercase; margin: 0.6em 0;}
+.services p{ text-align:justify; margin: 1.3em 0;}
+.services .headerBar{ 
+  background-image:url(../img/headerBar1.jpg); 		
+  width:100%; 
+  height:35px;  
+  color:#eee;
+}
+.services .headerBar h3 {
+    padding:7px 0 0 10px;
+    text-transform: uppercase;
+	margin: 0 auto;
+}
+.services .headerBar p{ 
+  color:#eee;     
+  font-size: 1.1em;
+  text-align:right; 
+  text-transform: uppercase;
+  padding: 8px 15px 5px 0;    
+}
+
+.services #headerBar{ 
+  background-image:url(../img/services/headerBar.jpg); 	
+  width:100%; 
+  height:35px;  
+  color:#eee;
+}
+.services #headerBar p{ 
+  color:#eee;     
+  font-size: 1.1em;
+  text-align:right; 
+  text-transform: uppercase;
+  padding: 8px 15px 5px 0;  
+	margin: 0 auto;  
+}
+
+/*******End SERVICES***********/
+
+/***************STAFF***************/
+#stuffBody {
+  background:url(../img/staff/ZBPF_STAFF_Background.jpg) no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:100%;
+}
+.staff{
+  width: 90%;
+  margin:0 auto;
+}
+#stuffBody #subNavList span {
+  font-size: 1.1em;
+  word-spacing: .5px;
+}
+.staff .title{
+  color: #820024;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50px 0;
+}
+.management{
+  width: 750px;
+  margin-top: -20px;
+}
+.manageTitle{	/* changed from .management .manageTitle to make it work for all the pages  --Farah 2/12/14 */
+  color: #820024;
+  font-size: 1.2em !important;
+  font-weight:bold;
+  text-align: center !important;
+  padding: 45px 0 20px 0;
+}
+.management .manageInfo{
+  text-align:justify;
+  line-height: 1.5em;
+}
+.staff p{
+    /*text-align: justify;*/
+  margin: 0 0 30px 0;
+  line-height: 1.5em;
+}
+.staff #profilePic{
+  width: 45%;
+  margin:-50px 0 10px 10px;
+  float:right;
+}
+
+/*******End STAFF***********/
+
+
+/***************BLOG***************/
+.blogArticle p {
+  margin: 0 0 1.3em 0;
+}
+
+.blogArticle p.blogHeader { 
+  color: #000;     
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 0; 
+  margin: 0 auto;  
+}
+
+.blogArticle a { color:#820024; }
+
+.blogArticle ul {
+  margin: 0 0 0 5%;
+  font-size: 1.0em;
+  line-height: 25px;
+  list-style: inherit;
+}
+.blogArticle ul li { margin: 0.5% 0 1.5%; }
+
+.blogArticle ul li a {  
+  text-decoration: underline; 
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 .5% 0 0;
+}
+
+.blogArticle .two-columns {
+  margin: 0;
+  height: 220px;
+}
+
+.blogArticle .two-columns .left-column {
+  width: 50%;
+  float: left;
+}
+
+.blogArticle .two-columns .right-column {
+  width: 50%;
+  float: right;
+}
+
+.blog-footer {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 60px 0;
+  color: #818181;
+  font-weight: normal;
+  font-size: 0.85em;
+}
+
+.blog-footer p {
+  padding-top: 3%;
+  margin: 0.83em 0;
+}
+
+/*******End BLOG***********/
+
+
+
+/************************/
+/*********FOOTER*********/
+/************************/
+
+/*  just commenting out to see if that works for IE  -- Farah 1/29/14
+footer {
+    position:relative;
+    z-index: 10;
+	width:100%;
+	text-align:center;
+	margin:20px 0 60px 0;
+}
+*/
+.footer {
+  position:relative;
+  z-index: 0;
+	width: 100%;
+	text-align: center;
+	margin: 20px 0 60px 0;
+}
+
+#homeFooter {
+  margin-top:-110px;
+}
+
+#top {
+  display:none;
+  position:fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: .3;
+  width:50px; 
+}
+
+#top:hover {
+  cursor:pointer;
+  opacity:.5;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+  /*  #subNav {
+        display:none;   
+    }
+    
+    #wrapper {
+        width:90%;   
+    }
+    
+    #subWrapper {
+        margin:0 auto;
+        padding:0;
+        width:90%;
+    }
+    
+    article {
+        width:100%;
+        margin:50px 0;
+    }
+    
+    #menuButton {
+        display:block;   
+    }
+    
+    nav {
+        position:absolute;
+        top:45px;
+        left:10px;
+        z-index:9999;
+        background:rgba(0,0,0,.6);
+        display:none;
+    }
+    
+    nav img {
+        display:none;   
+    }
+        
+    nav li {
+        display:block;
+        width: 200px;
+        text-align:left;
+        padding:0;
+        background:#fff;
+        margin:5px;
+        padding:5px;
+    }
+    
+    .lastNav,.firstNav {
+        text-align:left;
+        width:200px;
+    }*/
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * {
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster: h5bp.com/s */
+      box-shadow: none !important;
+      text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+      text-decoration: underline;
+  }
+
+  a[href]:after {
+      content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+      content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+      content: "";
+  }
+
+  pre,
+  blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+  }
+
+  thead {
+      display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+      page-break-inside: avoid;
+  }
+
+  img {
+      max-width: 100% !important;
+  }
+
+  @page {
+      margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+      orphans: 3;
+      widows: 3;
+  }
+
+  h2,
+  h3 {
+      page-break-after: avoid;
+  }
+}
