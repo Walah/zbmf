@@ -50,12 +50,15 @@ body.custom-background {
           a { 
             color: #CCC !important;
             text-transform: uppercase;
-            padding: 10px;
+            padding: 10px 7px;
         
             &:hover,
             &:focus,
             &:active {
               color: #FFF !important;
+            }
+            &:last-child {
+              padding-right: 23px;
             }
           }
 
